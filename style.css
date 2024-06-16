@@ -1,0 +1,275 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: "hm";
+    src: url("https://npm.elemecdn.com/velor2012_handsome_asset@9.0.2-1.1/HarmonyOS_Sans_SC_Medium.subset.woff2") format("truetype");
+}
+
+/* 美化滚动条 */
+::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width: 4px;
+    /*高宽分别对应横竖滚动条的尺寸*/
+    height: 4px;
+    scrollbar-arrow-color: red;
+}
+
+::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 0.4);
+    scrollbar-arrow-color: red;
+}
+
+::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px #f0f2f7;
+    border-radius: 0;
+    background: #f0f2f7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: "hm";
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+body {
+    background: #f0f2f7;
+}
+
+#head,
+#main {
+    width: 1150px;
+    margin: 0 auto;
+}
+
+#head {
+
+    margin-top: 30px;
+    font-size: 30px;
+    color: #738192;
+}
+
+#head span,
+#head hr {
+    margin-left: 15px;
+}
+
+#head hr {
+    margin-top: 5px;
+    border: solid 0.6px #738192;
+    width: 300px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, .75);
+}
+
+
+.box {
+    position: relative;
+    display: inline-block;
+    margin-top: 30px;
+    margin-right: 15px;
+    margin-left: 15px;
+    width: 350px;
+    height: 160px;
+    border-radius: 20px;
+    box-shadow: 1px 3px 10px rgba(0, 0, 0, .35);
+    color: #FFF;
+    text-shadow: 0 0 10px rgba(0, 0, 0, .75);
+    overflow: hidden;
+}
+
+.bg-blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    transform: scale(1.1);
+    z-index: -1;
+}
+
+.bg-black {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: -1;
+}
+
+.logo {
+    height: 120px;
+    width: 120px;
+    border-radius: 20px;
+    box-shadow: 1px 3px 7px rgba(0, 0, 0, .35);
+    margin-top: 20px;
+    margin-left: 25px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.name,
+.tag-os,
+.ms,
+.dl {
+    margin-left: 160px;
+}
+
+.name {
+    font-size: 20px;
+    margin-top: -125.5px;
+}
+
+.tag-os,
+.tag-size {
+    text-shadow: none;
+    width: 65px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 11px;
+}
+
+.tag-os {
+    margin-top: 3px;
+    color: #39c408;
+    background-color: rgb(226, 246, 218);
+}
+
+.tag-size {
+    margin-top: -14.5px;
+    margin-left: 230px;
+    color: #ff8400;
+    background-color: rgb(255, 237, 217);
+}
+
+.ms {
+    text-shadow: 0 0 8px rgba(0, 0, 0, .75);
+    margin-top: 3px;
+    font-size: 12px;
+    width: 168px;
+    height: 48px;
+}
+
+.ms-box {
+    height: 60px;
+    overflow: hidden;
+}
+
+.dl a {
+    display: block;
+    text-decoration: none;
+    color: #FFF;
+    width: 100%;
+    height: 100%;
+}
+
+.dl {
+    text-shadow: none;
+    width: 130px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #27c046;
+    margin-top: -6px;
+    color: #FFF;
+    border-radius: 20px;
+    transition: all 0.5s;
+}
+
+.dl:hover {
+    background-color: #20a53a;
+}
+
+.dl:hover svg {
+    -webkit-animation: spin 0.9s both;
+    animation: spin 0.9s both;
+}
+
+.icon {
+    width: 13px;
+    height: 13px;
+}
+
+@-webkit-keyframes spin {
+
+    0%,
+    100% {
+        transform-origin: top;
+    }
+
+    15% {
+        transform: rotateZ(10deg);
+    }
+
+    30% {
+        transform: rotateZ(-10deg);
+    }
+
+    45% {
+        transform: rotateZ(5deg);
+    }
+
+    60% {
+        transform: rotateZ(-5deg);
+    }
+
+    75% {
+        transform: rotateZ(2deg);
+    }
+}
+
+@keyframes spin {
+
+    0%,
+    100% {
+        transform-origin: top;
+    }
+
+    15% {
+        transform: rotateZ(10deg);
+    }
+
+    30% {
+        transform: rotateZ(-10deg);
+    }
+
+    45% {
+        transform: rotateZ(5deg);
+    }
+
+    60% {
+        transform: rotateZ(-5deg);
+    }
+
+    75% {
+        transform: rotateZ(2deg);
+    }
+}
+
+/* 适配手机端 */
+@media only screen and (max-width: 639px) {
+
+    #main,
+    #head {
+        width: 370px;
+    }
+
+    .box {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
