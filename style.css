@@ -83,6 +83,13 @@ body {
     color: #FFF;
     text-shadow: 0 0 10px rgba(0, 0, 0, .75);
     overflow: hidden;
+    transition: all 0.3s;
+}
+
+.box:hover {
+    box-shadow: #616161 0 3px 10px;
+    transform: translate(calc(0px), calc(0px - 5px));
+
 }
 
 .bg-blur {
